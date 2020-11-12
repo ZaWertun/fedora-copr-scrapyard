@@ -1,0 +1,15 @@
+diff -r -U3 systemd-bootchart-6bc59c0eed61fb28f23fc631d6c269cf87344c30.orig/src/svg.c systemd-bootchart-6bc59c0eed61fb28f23fc631d6c269cf87344c30/src/svg.c
+--- systemd-bootchart-6bc59c0eed61fb28f23fc631d6c269cf87344c30.orig/src/svg.c	2020-11-12 14:03:16.321978304 +0300
++++ systemd-bootchart-6bc59c0eed61fb28f23fc631d6c269cf87344c30/src/svg.c	2020-11-12 14:04:00.677137445 +0300
+@@ -1188,7 +1188,10 @@
+ 
+         /* need to know last node first */
+         ps->sample = ps->first;
+-        i = ps->sample->next->sampledata->counter;
++        i = 0;
++        if (ps->sample->next) {
++                i = ps->sample->next->sampledata->counter;
++        }
+ 
+         while (ps->sample->next && i<(n_samples-(arg_hz/2))) {
+                 double crt;
