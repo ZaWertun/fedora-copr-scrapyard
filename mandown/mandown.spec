@@ -1,5 +1,5 @@
 Name:           mandown
-Version:        1.0.1
+Version:        1.0.3
 Release:        1%{?dist}
 Summary:        Man-page inspired Markdown viewer
 
@@ -40,6 +40,9 @@ REAL_LDFLAGS="%{__global_ldflags}" \
 
 
 %changelog
+* Mon Sep 27 2021 Yaroslav Sidlovsky <zawertun@gmail.com> - 1.0.3-1
+- version 1.0.3
+
 * Wed Jul 01 2020 Yaroslav Sidlovsky <zawertun@gmail.com> - 1.0.1-1
 - version 1.0.1
 
